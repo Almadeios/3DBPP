@@ -28,7 +28,11 @@ python evaluate.py --max_objects 30 --max_episodes 1000 --save_interval 100 --re
 
 
 ## Requisitos
-
-## ctrl+shift+P -> Python: Select Interpreter 3.11.0
-## .\.venv\Scripts\activate
-## pip install -r requirements.txt
+## Microsoft Visual C++ 14.0 o superior
+    https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version
+    "https://aka.ms/vs/17/release/vc_redist.x64.exe"
+    python -m pip install --upgrade pip
+    https://www.python.org/downloads/release/python-3110/
+    ctrl+shift+P -> Python: Select Interpreter -> Create Virtual Enviroment -> venv -> Python 3.11.0
+    .\.venv\Scripts\activate
+    pip install -r requirements.txt
