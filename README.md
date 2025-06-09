@@ -28,7 +28,7 @@ python evaluate.py --max_objects 30 --max_episodes 1000 --save_interval 100 --re
 
 
 ## Requisitos
-## Microsoft Visual C++ 14.0 o superior
+    Microsoft Visual C++ 14.0 o superior
     https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version
     "https://aka.ms/vs/17/release/vc_redist.x64.exe"
     python -m pip install --upgrade pip
