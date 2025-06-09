@@ -5,27 +5,26 @@ Este proyecto implementa una solución al problema de empaquetado 3D (3DBPP) en 
 ---
 
 ## 📦 Estructura
-
-3DBPP/
-├── datasets/blockout/ # Dataset original con test_sequence.pt,id2shape.pt, pointCloud/, shape_vhacd/
-├── environments/physics_env.py # Entorno Gymnasium personalizado
-├── algorithms/dqn_rainbow/ # agent, memory, pointnet, trainer
-├── utils/visualization.py # Visualización y métricas
-├── main.py # Entrenamiento
-├── evaluate.py # Evaluación de modelos
-├── arguments.py # Hiperparámetros y configuración
-└── requirements.txt
+    3DBPP/  
+    datasets/blockout/ # Dataset original con test_sequence.pt,id2shape.pt, pointCloud/, shape_vhacd/
+    environments/packing_env.py # Entorno Gymnasium personalizado
+    algorithms/dqn_rainbow/ # agent, memory, pointnet
+    utils/ # data_loader, interface, sequence_loader, shape_features
+    train.py
+    evaluate.py 
+    arguments.py 
+    requirements.txt
+    plot_metrics.py
 
 ## Entrenamiento
-python train.py --custom full_training --max_objects 30 --max_episodes 1000 --visual --save_interval 100 --resolutionH 8 --resolutionRot 8
-python train.py --custom full_training --max_objects 30 --max_episodes 1000 --save_interval 100 --resolutionH 8 --resolutionRot 8
+    python train.py --custom full_training --max_objects 30 --max_episodes 1000 --visual --save_interval 100 --resolutionH 8 --resolutionRot 8
+    python train.py --custom full_training --max_objects 30 --max_episodes 1000 --save_interval 100 --resolutionH 8 --resolutionRot 8
 
-python plot_metrics.py
-
+## Metricas
+    python plot_metrics.py
 
 ## Evaluación
 python evaluate.py --max_objects 30 --max_episodes 1000 --save_interval 100 --resolutionH 8 --resolutionRot 8
-
 
 ## Requisitos
     Microsoft Visual C++ 14.0 o superior
