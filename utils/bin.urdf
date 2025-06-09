@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<robot name="bin">
+  <!-- Base -->
+  <link name="base">
+    <visual>
+      <geometry><box size="1 1 0.02"/></geometry>
+      <origin xyz="0 0 -0.01"/>
+      <material name="gray"><color rgba="0.7 0.7 0.7 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="1 1 0.02"/></geometry>
+      <origin xyz="0 0 -0.01"/>
+    </collision>
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <!-- Paredes unidas al link base -->
+
+  <link name="wall_left">
+    <visual>
+      <geometry><box size="0.02 1 0.4"/></geometry>
+      <origin xyz="-0.49 0 0.2"/>
+      <material name="blue"><color rgba="0.3 0.3 1 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="0.02 1 0.4"/></geometry>
+      <origin xyz="-0.49 0 0.2"/>
+    </collision>
+  </link>
+
+  <joint name="joint_left" type="fixed">
+    <parent link="base"/>
+    <child link="wall_left"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="wall_right">
+    <visual>
+      <geometry><box size="0.02 1 0.4"/></geometry>
+      <origin xyz="0.49 0 0.2"/>
+      <material name="blue"><color rgba="0.3 0.3 1 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="0.02 1 0.4"/></geometry>
+      <origin xyz="0.49 0 0.2"/>
+    </collision>
+  </link>
+
+  <joint name="joint_right" type="fixed">
+    <parent link="base"/>
+    <child link="wall_right"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="wall_front">
+    <visual>
+      <geometry><box size="1 0.02 0.4"/></geometry>
+      <origin xyz="0 0.49 0.2"/>
+      <material name="blue"><color rgba="0.3 0.3 1 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="1 0.02 0.4"/></geometry>
+      <origin xyz="0 0.49 0.2"/>
+    </collision>
+  </link>
+
+  <joint name="joint_front" type="fixed">
+    <parent link="base"/>
+    <child link="wall_front"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="wall_back">
+    <visual>
+      <geometry><box size="1 0.02 0.4"/></geometry>
+      <origin xyz="0 -0.49 0.2"/>
+      <material name="blue"><color rgba="0.3 0.3 1 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="1 0.02 0.4"/></geometry>
+      <origin xyz="0 -0.49 0.2"/>
+    </collision>
+  </link>
+
+  <joint name="joint_back" type="fixed">
+    <parent link="base"/>
+    <child link="wall_back"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+</robot>
